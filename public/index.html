@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Private business banking powered by zkStables." />
+  <title>zkStables Business</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-mark">Z</div>
+        <span>zkStables Business</span>
+      </div>
+
+      <nav class="side-nav">
+        <a class="active" href="#">
+          <span>⌂</span> Overview
+        </a>
+        <a href="#account">
+          <span>◫</span> Accounts
+        </a>
+        <a href="#payments">
+          <span>↗</span> Payments
+        </a>
+        <a href="#cards">
+          <span>▣</span> Cards
+        </a>
+        <a href="#activity">
+          <span>≡</span> Activity
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="network-status">
+          <span class="status-dot"></span>
+          <div>
+            <strong>Base Sepolia</strong>
+            <small>Testnet · Chain 84532</small>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1>Overview</h1>
+          <p>Your private business account</p>
+        </div>
+
+        <div class="top-actions">
+          <div class="privacy-badge">◆ Encrypted</div>
+          <div class="avatar">BA</div>
+        </div>
+      </header>
+
+      <section class="balance-section" id="account">
+        <div class="balance-copy">
+          <p class="label">TOTAL ENCRYPTED BALANCE</p>
+
+          <div class="balance-line">
+            <span id="balance-value">—</span>
+            <span class="currency">zkUSD</span>
+          </div>
+
+          <div class="balance-details">
+            <span>business-a</span>
+            <span class="private-label">● Private on-chain</span>
+          </div>
+        </div>
+
+        <button id="refresh-balance" class="ghost-button" type="button">
+          ↻ Refresh
+        </button>
+
+        <div class="glow"></div>
+      </section>
+
+      <section class="quick-actions" id="payments">
+        <button class="action-card" id="open-send" type="button">
+          <span class="action-icon">↗</span>
+          <span>
+            <strong>Send</strong>
+            <small>Encrypted transfer</small>
+          </span>
+        </button>
+
+        <div class="action-card passive">
+          <span class="action-icon">↙</span>
+          <span>
+            <strong>Receive</strong>
+            <small>zkUSD account</small>
+          </span>
+        </div>
+
+        <div class="action-card passive">
+          <span class="action-icon">＋</span>
+          <span>
+            <strong>Bank transfer</strong>
+            <small>Incoming funds</small>
+          </span>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="account-card">
+          <div class="card-header">
+            <div>
+              <p class="label">ACCOUNT</p>
+              <h2>zkUSD Business</h2>
+            </div>
+            <span class="encrypted-tag">Encrypted</span>
+          </div>
+
+          <div class="account-amount">
+            <span id="account-balance">—</span> zkUSD
+          </div>
+
+          <div class="account-footer">
+            <span>zkStables</span>
+            <span>Base Sepolia</span>
+          </div>
+        </article>
+
+        <article class="team-card-panel" id="cards">
+          <div class="card-header">
+            <div>
+              <p class="label">TEAM CARD</p>
+              <h2>Company card</h2>
+            </div>
+            <span class="card-state">Demo card</span>
+          </div>
+
+          <div class="bank-card">
+            <div class="bank-card-top">
+              <div class="mini-logo">Z</div>
+              <span>BUSINESS</span>
+            </div>
+
+            <div class="bank-card-number">•••• &nbsp; •••• &nbsp; •••• &nbsp; 4242</div>
+
+            <div class="bank-card-bottom">
+              <span>TEAM</span>
+              <strong>zkUSD</strong>
+            </div>
+          </div>
+
+          <button id="authorize-card" class="authorize-button" type="button">
+            Test authorization · 42.50
+          </button>
+
+          <div id="card-result" class="result" aria-live="polite"></div>
+        </article>
+      </section>
+
+      <section class="activity-panel" id="activity">
+        <div class="section-header">
+          <div>
+            <p class="label">ACTIVITY</p>
+            <h2>Testnet activity</h2>
+          </div>
+          <span id="balance-status">Connecting…</span>
+        </div>
+
+        <div class="activity-list">
+          <div class="activity-row">
+            <div class="activity-icon received">↓</div>
+            <div class="activity-name">
+              <strong>Initial funding</strong>
+              <span>Faucet · Base Sepolia</span>
+            </div>
+            <div class="activity-value positive">+100.00 zkUSD</div>
+          </div>
+
+          <div class="activity-row">
+            <div class="activity-icon">↗</div>
+            <div class="activity-name">
+              <strong>Private transfer</strong>
+              <span>To business-b</span>
+            </div>
+            <div class="activity-value">−25.00 zkUSD</div>
+          </div>
+
+          <div class="activity-row">
+            <div class="activity-icon">↗</div>
+            <div class="activity-name">
+              <strong>Public withdrawal</strong>
+              <span>To EVM account</span>
+            </div>
+            <div class="activity-value">−10.00 zkUSD</div>
+          </div>
+
+          <div class="activity-row">
+            <div class="activity-icon">↗</div>
+            <div class="activity-name">
+              <strong>Private transfer</strong>
+              <span>To business-b · UI test</span>
+            </div>
+            <div class="activity-value">−1.00 zkUSD</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="send-modal">
+    <div class="modal">
+      <button id="close-send" class="modal-close" type="button">×</button>
+
+      <p class="label">ENCRYPTED TRANSFER</p>
+      <h2>Send zkUSD</h2>
+      <p class="modal-description">
+        Transfer privately from business-a to business-b.
+      </p>
+
+      <form id="transfer-form">
+        <label for="transfer-amount">Amount</label>
+
+        <div class="amount-input">
+          <input
+            id="transfer-amount"
+            type="number"
+            min="0.01"
+            step="0.01"
+            value="1.00"
+            required
+          />
+          <span>zkUSD</span>
+        </div>
+
+        <div class="transfer-detail">
+          <span>From</span>
+          <strong>business-a</strong>
+        </div>
+
+        <div class="transfer-detail">
+          <span>To</span>
+          <strong>business-b</strong>
+        </div>
+
+        <div class="transfer-detail">
+          <span>Network</span>
+          <strong>Base Sepolia</strong>
+        </div>
+
+        <button class="send-button" type="submit">
+          Send encrypted transfer
+        </button>
+      </form>
+
+      <div id="transfer-result" class="result" aria-live="polite"></div>
+
+      <p class="testnet-warning">
+        Testnet transaction · backend generates the ZK proof
+      </p>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
